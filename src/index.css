@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.heading {
+  font-weight: 800;
+}
+
+.form-heading {
+  font-family: 'Delicious Handrawn', cursive;
+  font-weight: 400;
+}
+
+.my-phone-input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.my-phone-input input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.PhoneInputCountrySelect {
+  background-color: #1c1917;
+  border: none;
+}
+
+.portfolio-label {
+  position: relative;
+}
+
+.portfolio-label::after {
+  content: '(optional)';
+  font-size: 12px;
+  position: absolute;
+  top: 25px;
+  left: 8px;
+}
+
+@media (max-width: 639px) {
+  .portfolio-label::after {
+    top: 6px;
+    left: 85px;
+  }
+}
+
+.reference-list span {
+  font-weight: 600;
+}
