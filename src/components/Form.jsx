@@ -410,7 +410,7 @@ const Form = ({ onSubmit }) => {
                       onChange={e => setInputValue(e.target.value)}
                       onKeyDown={handleKeyDown}
                       type="text"
-                      placeholder="Enter your skills"
+                      placeholder="Enter skills then hit &nbsp; '&#43;'"
                     />
                     <button
                       type="button"
@@ -562,7 +562,7 @@ const Form = ({ onSubmit }) => {
                       onChange={e => setTechSkillsInputValue(e.target.value)}
                       onKeyDown={handleKeyDown}
                       type="text"
-                      placeholder="Enter your skills"
+                      placeholder="Enter skills then hit &nbsp; '&#43;'"
                     />
                     <button
                       type="button"
