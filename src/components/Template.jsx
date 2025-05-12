@@ -39,7 +39,7 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
             <div className="flex gap-x-3 items-center">
               <p ref={subjectRef}>
                 Subject: Job Application -{' '}
-                {formData.finalRole
+                {formData.finalJobRole
                   .split(' ')
                   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
                   .join(' ')}{' '}
@@ -63,7 +63,7 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
 
               <p className="mb-4">
                 I am writing to express my interest in the{' '}
-                {formData.finalRole
+                {formData.finalJobRole
                   .split(' ')
                   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
                   .join(' ')}{' '}

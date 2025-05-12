@@ -31,7 +31,7 @@ const sampleTechnicalSkills = [
 
 const Form = ({ onSubmit }) => {
   const [fullName, setFullName] = useState('');
-  const [finalRole, setFinalRole] = useState('');
+  const [finalJobRole, setFinalJobRole] = useState('');
   const [isCustom, setIsCustom] = useState(false);
   const [company, setCompany] = useState('');
   const [years, setYears] = useState(0);
@@ -79,7 +79,7 @@ const Form = ({ onSubmit }) => {
 
   const handleReset = () => {
     setFullName('');
-    setFinalRole('');
+    setFinalJobRole('');
     setIsCustom(false);
     setCompany('');
     setYears(0);
@@ -104,7 +104,7 @@ const Form = ({ onSubmit }) => {
     e.preventDefault();
     if (
       !fullName ||
-      !finalRole ||
+      !finalJobRole ||
       !company ||
       !finalDomain ||
       !skillProficiency.length ||
@@ -132,7 +132,7 @@ const Form = ({ onSubmit }) => {
 
     const formData = {
       fullName,
-      finalRole,
+      finalJobRole,
       company,
       years,
       months,
@@ -202,7 +202,7 @@ const Form = ({ onSubmit }) => {
           {/* ROLE */}
           <div className="flex gap-2 max-sm:flex-col ">
             <label htmlFor="role" className="text-xl">
-              Role:{' '}
+              Job Role:{' '}
             </label>
 
             {!isCustom ? (
@@ -210,8 +210,8 @@ const Form = ({ onSubmit }) => {
                 <select
                   name="role"
                   id="role"
-                  value={finalRole}
-                  onChange={e => setFinalRole(e.target.value)}
+                  value={finalJobRole}
+                  onChange={e => setFinalJobRole(e.target.value)}
                   className="bg-stone-900 border rounded p-0.5 max-sm:p-2"
                 >
                   <option value="">-- Select a role --</option>
@@ -226,7 +226,7 @@ const Form = ({ onSubmit }) => {
                   className="text-yellow-400 text-lg underline cursor-pointer max-sm:w-max max-sm:m-auto"
                   onClick={() => {
                     setIsCustom(true);
-                    setFinalRole('');
+                    setFinalJobRole('');
                   }}
                 >
                   or specify custom →
@@ -236,8 +236,8 @@ const Form = ({ onSubmit }) => {
               <>
                 <input
                   className="bg-stone-900 text-white rounded outline pl-2 max-sm:p-2 focus:outline-yellow-500"
-                  value={finalRole}
-                  onChange={e => setFinalRole(e.target.value)}
+                  value={finalJobRole}
+                  onChange={e => setFinalJobRole(e.target.value)}
                   type="text"
                   placeholder="Enter your role"
                 />
@@ -246,7 +246,7 @@ const Form = ({ onSubmit }) => {
                   className="text-yellow-400 text-lg underline cursor-pointer max-sm:w-max max-sm:m-auto"
                   onClick={() => {
                     setIsCustom(false);
-                    setFinalRole('');
+                    setFinalJobRole('');
                   }}
                 >
                   ← back to list
@@ -599,14 +599,14 @@ const Form = ({ onSubmit }) => {
           <div className="flex justify-center gap-x-5">
             <button
               type="button"
-              className=" text-white text-lg font-bold cursor-pointer rounded px-3 py-1 bg-red-600 hover:bg-red-700 outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform"
+              className=" text-white text-lg font-bold cursor-pointer rounded px-3 py-1 bg-red-600 hover:bg-red-700 outline-none focus:ring-2 shadow-lg transform active:scale-75 transition-transform"
               onClick={handleReset}
             >
               Reset
             </button>
             <button
               type="submit"
-              className=" text-white text-lg font-bold cursor-pointer rounded px-6 py-1 bg-green-600 hover:bg-green-700 outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform"
+              className=" text-white text-lg font-bold cursor-pointer rounded px-6 py-1 bg-green-600 hover:bg-green-700 outline-none focus:ring-2 shadow-lg transform active:scale-75 transition-transform"
             >
               <IoMdDoneAll size={40} />
             </button>
