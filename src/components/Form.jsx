@@ -596,7 +596,7 @@ const Form = ({ onSubmit }) => {
               </>
             )}
           </div>
-          <div className="flex justify-center gap-x-5">
+          <div className="flex justify-center gap-x-5 max-sm:mt-6">
             <button
               type="button"
               className=" text-white text-lg font-bold cursor-pointer rounded px-3 py-1 bg-red-600 hover:bg-red-700 outline-none focus:ring-2 shadow-lg transform active:scale-75 transition-transform"
