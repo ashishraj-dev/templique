@@ -171,8 +171,9 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
         </section>
       ) : (
         <section className="bg-stone-950 text-white text-2xl max-sm:text-lg w-full flex flex-col items-center py-20">
-          <p className="flex items-center gap-2 text-gray-400 mx-5 max-sm:mx-3">
-            <span>📝</span> We're waiting for your form — your template will be right here!
+          <p className="text-gray-400 text-center mx-5 max-sm:mx-3 flex max-md:flex-col gap-x-2 items-center">
+            <span className="text-2xl">📝</span>
+            <span>We're waiting for your form — your&nbsp;template will be right here!</span>
           </p>
         </section>
       )}
