@@ -10,9 +10,11 @@ import { FaExclamation } from 'react-icons/fa';
 const sampleRole = [
   'Web Developer',
   'Front-End Developer',
+  'Software Engineer',
   'React.js Developer',
   'Backend Developer',
   'Full Stack Developer',
+  'Android Developer',
 ];
 
 const sampleSkillProficiency = ['HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS', 'JavaScript', 'React.js'];
