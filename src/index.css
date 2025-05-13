@@ -52,7 +52,7 @@ body {
 
 @media (max-width: 639px) {
   .portfolio-label::after {
-    top: 6px;
+    top: 4px;
     left: 85px;
   }
 }
