@@ -374,7 +374,7 @@ const Form = ({ onSubmit }) => {
                     {showSampleButton && (
                       <button
                         type="button"
-                        className="bg-white hover:bg-violet-700 hover:text-white text-gray-800 font-semibold py-1 px-2 border cursor-pointer border-gray-400 rounded shadow"
+                        className="bg-transparent text-yellow-400 border cursor-pointer border-yellow-400 hover:bg-yellow-400 hover:text-black font-medium py-1 px-2 rounded transition-all duration-200 ease-in-out shadow-[0_0_8px_rgba(255,255,0,0.4)] hover:shadow-[0_0_10px_rgba(255,255,0,0.6)]"
                         onClick={handleSkillButton}
                       >
                         Use Sample Data
@@ -526,7 +526,7 @@ const Form = ({ onSubmit }) => {
                     {showSampleButton2 && (
                       <button
                         type="button"
-                        className="bg-white hover:bg-violet-700 hover:text-white text-gray-800 font-semibold py-1 px-2 border cursor-pointer border-gray-400 rounded shadow"
+                        className="bg-transparent text-yellow-400 border cursor-pointer border-yellow-400 hover:bg-yellow-400 hover:text-black font-medium py-1 px-2 rounded transition-all duration-200 ease-in-out shadow-[0_0_8px_rgba(255,255,0,0.4)] hover:shadow-[0_0_10px_rgba(255,255,0,0.6)]"
                         onClick={handleTechSkillsButton}
                       >
                         Use Sample Data
