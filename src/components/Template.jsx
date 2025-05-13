@@ -36,9 +36,10 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
           className="bg-stone-950 text-white w-full max-sm:px-5 flex flex-col items-center pt-13 pb-20 gap-y-3"
         >
           <div className=" w-1/2 max-lg:w-5/6 max-sm:w-full mx-5 items-start bg-neutral-800 text-white text-lg max-sm:text-sm h-auto px-4 max-sm:pl-4 max-sm:pr-3 py-1 rounded-lg max-sm:rounded-lg tracking-wider">
-            <div className="flex gap-x-3 items-center">
+            <div className="flex gap-x-3 items-center max-sm:text-xs">
+              <span>Subject:</span>
               <p ref={subjectRef}>
-                Subject: Job Application -{' '}
+                Job Application -{' '}
                 {formData.finalJobRole
                   .split(' ')
                   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
