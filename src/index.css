@@ -44,7 +44,7 @@ body {
 
 .portfolio-label::after {
   content: '(optional)';
-  font-size: 12px;
+  font-size: 14px;
   position: absolute;
   top: 25px;
   left: 8px;
