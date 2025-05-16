@@ -638,7 +638,7 @@ const Form = ({ onSubmit }) => {
                                   <li
                                     key={res}
                                     data-index={index}
-                                    className={`px-2 py-0.5 cursor-pointer hover:bg-blue-800 ${
+                                    className={`py-1 pr-1 pl-2 max-sm:p-2 cursor-pointer hover:bg-blue-800 ${
                                       index === selectedItem ? 'bg-blue-700 text-white' : ''
                                     }`}
                                     onClick={() => {
@@ -731,7 +731,7 @@ const Form = ({ onSubmit }) => {
                               <li
                                 key={res}
                                 data-index={index}
-                                className={`px-2 py-0.5 cursor-pointer hover:bg-blue-800 ${
+                                className={`py-1 pr-1 pl-2 max-sm:p-2 cursor-pointer hover:bg-blue-800 ${
                                   index === selectedItem ? 'bg-blue-700 text-white' : ''
                                 }`}
                                 onClick={() => {
@@ -910,7 +910,7 @@ const Form = ({ onSubmit }) => {
                                   <li
                                     key={res}
                                     data-index={index}
-                                    className={`px-2 py-0.5 cursor-pointer hover:bg-blue-800 ${
+                                    className={`py-1 pr-1 pl-2 max-sm:p-2 cursor-pointer hover:bg-blue-800 ${
                                       index === selectedItemTechSkills ? 'bg-blue-700 text-white' : ''
                                     }`}
                                     onClick={() => {
@@ -1002,7 +1002,7 @@ const Form = ({ onSubmit }) => {
                               <li
                                 key={res}
                                 data-index={index}
-                                className={`px-2 py-0.5 cursor-pointer hover:bg-blue-800 ${
+                                className={`py-1 pr-1 pl-2 max-sm:p-2 cursor-pointer hover:bg-blue-800 ${
                                   index === selectedItemTechSkills ? 'bg-blue-700 text-white' : ''
                                 }`}
                                 onClick={() => {

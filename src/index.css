@@ -61,7 +61,7 @@ body {
   z-index: 100;
   box-shadow: 0 0 15px #8d8a88;
   overflow-y: auto;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .searchList {
@@ -83,7 +83,7 @@ body {
   z-index: 100;
   box-shadow: 0 0 15px #8d8a88;
   overflow-y: auto;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 @media (max-width: 639px) {
