@@ -513,7 +513,7 @@ const Form = ({ onSubmit }) => {
                 pattern="[0-9]*"
                 className={`bg-stone-900 text-white rounded outline ${
                   months ? 'pl-2' : 'pl-1'
-                }  max-sm:px-2 max-sm:py-1 focus:outline-yellow-500 w-10`}
+                }  max-sm:px-0.6 max-sm:py-1 focus:outline-yellow-500 w-10`}
                 value={months}
                 name="months"
                 placeholder="0–12"
