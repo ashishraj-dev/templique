@@ -20,7 +20,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Toaster position="bottom-center" />
+      <Toaster position="bottom-center" toastOptions={{ duration: 6000 }} />
       <Form onSubmit={handleFormSubmit} />
       <Template formData={submittedData} handleScroll={handleScroll} sectionRef={sectionRef} />
     </>

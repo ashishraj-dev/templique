@@ -31,6 +31,7 @@ body {
   border: none;
   outline: none;
   font-family: inherit;
+  padding-left: 2px;
 }
 
 .PhoneInputCountrySelect {
@@ -50,13 +51,60 @@ body {
   left: 8px;
 }
 
+.searchList,
+.searchList2 {
+  position: absolute;
+  width: 12rem;
+  max-height: 150px;
+  overflow-y: scroll;
+  background-color: #1c1917;
+  z-index: 100;
+  box-shadow: 0 0 15px #8d8a88;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.searchList {
+  top: 30px;
+}
+
+.searchList2 {
+  top: 35px;
+}
+
+.searchList3,
+.searchList4 {
+  position: absolute;
+  top: 35px;
+  width: 12rem;
+  max-height: 150px;
+  overflow-y: scroll;
+  background-color: #1c1917;
+  z-index: 100;
+  box-shadow: 0 0 15px #8d8a88;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
 @media (max-width: 639px) {
   .portfolio-label::after {
     top: 4px;
     left: 85px;
   }
+
+  .searchList,
+  .searchList2,
+  .searchList3,
+  .searchList4 {
+    top: 45px;
+    min-width: 12.5rem;
+  }
 }
 
 .reference-list span {
   font-weight: 600;
+}
+
+.close-btn {
+  position: absolute;
 }
