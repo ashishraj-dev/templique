@@ -16,7 +16,7 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
     const el = generatedTemplateRef.current;
     if (el) {
       navigator.clipboard.writeText(el.innerText);
-      toast.success('Copied to clipboard!');
+      toast.success('Template has been copied!');
     }
   };
 
@@ -24,7 +24,7 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
     const el = subjectRef.current;
     if (el) {
       navigator.clipboard.writeText(el.innerText);
-      toast.success('Copied to clipboard!');
+      toast.success('Subject copied! Ready to paste.');
     }
   };
 
