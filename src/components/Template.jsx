@@ -51,11 +51,12 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
                   .join(' ')}
               </p>
 
-              <FaRegCopy
-                onClick={handleCopySubject}
-                size={25}
-                className="cursor-pointer outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform"
-              />
+              <span onClick={handleCopySubject}>
+                <FaRegCopy
+                  size={25}
+                  className="cursor-pointer outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform"
+                />
+              </span>
             </div>
           </div>
           <div className="leading-5.5 max-sm:leading-5 w-1/2 max-lg:w-5/6 max-sm:w-full mx-5 items-start bg-neutral-800 text-white text-lg max-sm:text-sm h-auto px-4 max-sm:pl-4 max-sm:pr-3 py-5 rounded-4xl max-sm:rounded-2xl tracking-wider">
