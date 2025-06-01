@@ -12,14 +12,14 @@ import { skillsList } from './data';
 const sampleRole = [
   'Web Developer',
   'Front-End Developer',
+  'FrontEnd Developer',
   'Software Engineer',
   'React.js Developer',
   'Backend Developer',
   'Full Stack Developer',
-  'Android Developer',
 ];
 
-const sampleSkillProficiency = ['HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS', 'JavaScript', 'React.js'];
+const sampleSkillProficiency = ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Adobe Photoshop'];
 
 const sampleTechnicalSkills = [
   'HTML5',
@@ -34,15 +34,16 @@ const sampleTechnicalSkills = [
 ];
 
 const Form = ({ onSubmit }) => {
-  const [fullName, setFullName] = useState('');
+  const [fullName, setFullName] = useState('Ashish Raj');
   const [finalJobRole, setFinalJobRole] = useState('');
   const [isCustom, setIsCustom] = useState(false);
   const [company, setCompany] = useState('');
   const [years, setYears] = useState(0);
-  const [months, setMonths] = useState(1);
-  const [finalDomain, setFinalDomain] = useState('');
+  const [months, setMonths] = useState(5);
+  const [finalDomain, setFinalDomain] = useState(sampleRole[0]);
   const [isDomainCustom, setIsDomainCustom] = useState(false);
   const [inputValue, setInputValue] = useState('');
+<<<<<<< HEAD
   const [filteredSkill, setFilteredSkill] = useState([]);
   const [skillProficiency, setSkillProficiency] = useState([]);
   const [isSkillProficiencyCustom, setIsSkillProficiencyCustom] = useState(false);
@@ -53,8 +54,18 @@ const Form = ({ onSubmit }) => {
   const [linkedin, setLinkedin] = useState('');
   const [github, setGithub] = useState('');
   const [technicalSkills, setTechnicalSkills] = useState([]);
+=======
+  const [skillProficiency, setSkillProficiency] = useState(sampleSkillProficiency);
+  const [isSkillProficiencyCustom, setIsSkillProficiencyCustom] = useState(false);
+  const [showSampleButton, setShowSampleButton] = useState(false);
+  const [number, setNumber] = useState('+918210419437');
+  const [portfolio, setPortfolio] = useState('https://ashishraj1.netlify.app/');
+  const [linkedin, setLinkedin] = useState('https://www.linkedin.com/in/ashishraj-dev');
+  const [github, setGithub] = useState('https://github.com/ashishraj-dev');
+  const [technicalSkills, setTechnicalSkills] = useState(sampleTechnicalSkills);
+>>>>>>> 1090ebd (fixed project name)
   const [isTechnicalSkillsCustom, setIsTechnicalSkillsCustom] = useState(false);
-  const [showSampleButton2, setShowSampleButton2] = useState(true);
+  const [showSampleButton2, setShowSampleButton2] = useState(false);
   const [techSkillsInputValue, setTechSkillsInputValue] = useState('');
   const [filteredSkill2, setFilteredSkill2] = useState([]);
   const inputRef = useRef(null);
@@ -508,12 +519,16 @@ const Form = ({ onSubmit }) => {
               />
               <span>{years > 1 ? 'years' : 'year'}</span>
               <input
+<<<<<<< HEAD
                 type="text"
                 inputMode="numeric"
                 pattern="[0-9]*"
                 className={`bg-stone-900 text-white rounded outline ${
                   months ? 'pl-2' : 'pl-1'
                 }  max-sm:px-0.6 max-sm:py-1 focus:outline-yellow-500 w-10`}
+=======
+                className="bg-stone-900 text-white rounded outline pl-2 max-sm:px-0.6 max-sm:py-1 focus:outline-yellow-500 w-10"
+>>>>>>> 1090ebd (fixed project name)
                 value={months}
                 name="months"
                 placeholder="0–12"
@@ -593,8 +608,16 @@ const Form = ({ onSubmit }) => {
           </div>
 
           {/* SKILL PROFICIENCY */}
+<<<<<<< HEAD
           <div className="flex max-sm:flex-col">
             <label htmlFor="skill-proficiency" className="text-xl flex min-w-[9.5rem]">
+=======
+          <div className="flex gap-2 max-sm:flex-col">
+            <label
+              htmlFor="skill-proficiency"
+              className={`text-xl flex ${!showSampleButton ? 'basis-42 max-sm:basis-0' : 'basis-auto'}`}
+            >
+>>>>>>> 1090ebd (fixed project name)
               Skill Proficiency:{' '}
             </label>
 

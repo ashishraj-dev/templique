@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "templique",
+=======
+  "name": "templique-personal",
+>>>>>>> 1090ebd (fixed project name)
   "private": true,
   "version": "0.0.0",
   "type": "module",
