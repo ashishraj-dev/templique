@@ -16,7 +16,7 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
     const el = generatedTemplateRef.current;
     if (el) {
       navigator.clipboard.writeText(el.innerText);
-      toast.success('Template has been copied!');
+      toast.success('Copied to clipboard!');
     }
   };
 
@@ -24,7 +24,7 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
     const el = subjectRef.current;
     if (el) {
       navigator.clipboard.writeText(el.innerText);
-      toast.success('Subject copied! Ready to paste.');
+      toast.success('Copied to clipboard!');
     }
   };
 
@@ -61,7 +61,7 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
           </div>
           <div className="leading-5.5 max-sm:leading-5 w-1/2 max-lg:w-5/6 max-sm:w-full mx-5 items-start bg-neutral-800 text-white text-lg max-sm:text-sm h-auto px-4 max-sm:pl-4 max-sm:pr-3 py-5 rounded-4xl max-sm:rounded-2xl tracking-wider">
             <div ref={generatedTemplateRef}>
-              <p className="mb-4">Dear HR,</p>
+              <p className="mb-4">Dear Hiring Manager,</p>
 
               <p className="mb-4">
                 I am writing to express my interest in the{' '}
@@ -86,23 +86,38 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
                   .split(' ')
                   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
                   .join(' ')}
-                , I bring a solid foundation in {formData.skillProficiency.join(', ')}, and a passion for
-                crafting responsive, user-friendly web applications.
+                , I specialize in building responsive, high-performance user interfaces using{' '}
+                {formData.skillProficiency.length > 1
+                  ? `${formData.skillProficiency.slice(0, -1).join(', ')}, and ${
+                      formData.skillProficiency[formData.skillProficiency.length - 1]
+                    }`
+                  : formData.skillProficiency[0]}
+                {''}.
               </p>
 
               <p className="mb-4">
-                I believe my skill set aligns well with your team’s goals, and I am eager to contribute and
-                grow in a collaborative environment like yours.
+                My background combines technical development with a strong eye for design, thanks to my
+                proficiency in Adobe Photoshop, Adobe Illustrator and Canva. I am confident that my ability to
+                bridge the gap between design and code will bring immediate value to your development team.
               </p>
 
-              <p className="mb-4">
-                Please find my resume attached. Below are my key details for your reference:
-              </p>
-
-              <ul className="mb-4 leading-5.5 max-sm:leading-5 reference-list text-lg break-words whitespace-normal max-sm:text-sm">
+              <p className="mb-1">Quick Overview of My Profile:</p>
+              <ul className="mb-4 ml-5 leading-5.5 list-disc max-sm:leading-5 reference-list text-lg break-words whitespace-normal max-sm:text-sm">
                 <li>
-                  <span>Contact Number:</span> {formData.number}
+                  <span>Technical Skills:</span> {formData.technicalSkills.join(', ')}
                 </li>
+                <li>
+                  <span>Design Skills:</span> {formData.designSkills.join(', ')}
+                </li>
+                <li>
+                  <span>Experience: </span>{' '}
+                  {formData.months > 1 ? `${formData.months} months ` : `${formData.months} month `} (Hands-on
+                  development and UI/UX implementation)
+                </li>
+              </ul>
+
+              <p className="mb-1">Links & Portfolio:</p>
+              <ul className="mb-4 ml-5 leading-5.5 list-disc max-sm:leading-5 reference-list text-lg break-words whitespace-normal max-sm:text-sm">
                 {formData.portfolio && (
                   <li>
                     <span>Portfolio: </span>
@@ -118,17 +133,6 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
                 )}
 
                 <li>
-                  <span>LinkedIn: </span>
-                  <a
-                    href={formData.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link hover:underline text-blue-500 hover:text-blue-600 visited:text-purple-600"
-                  >
-                    {formData.linkedin}
-                  </a>
-                </li>
-                <li>
                   <span>Github: </span>
                   <a
                     href={formData.github}
@@ -139,14 +143,27 @@ const Template = ({ formData, handleScroll, sectionRef }) => {
                     {formData.github}
                   </a>
                 </li>
+
                 <li>
-                  <span>Technical Skills:</span> {formData.technicalSkills.join(', ')}
+                  <span>LinkedIn: </span>
+                  <a
+                    href={formData.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link hover:underline text-blue-500 hover:text-blue-600 visited:text-purple-600"
+                  >
+                    {formData.linkedin}
+                  </a>
+                </li>
+
+                <li>
+                  <span>Phone:</span> {formData.number}
                 </li>
               </ul>
 
               <p className="mb-4">
-                Thank you for taking the time to review my application. I look forward to the opportunity to
-                discuss how I can contribute to your team.
+                I have attached my resume for your review and would welcome the opportunity to discuss how my
+                skills align with your team’s goals.
               </p>
 
               <p>
